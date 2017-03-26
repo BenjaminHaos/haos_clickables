@@ -1,82 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <title>HaosClicks</title>
-  
-  
-<!-- 
-  <link rel="stylesheet" href="css/style.css">
--->
+  <title>Haos Clickables</title>
+  <link rel="stylesheet" href="css/haos_clickables.css">
 </head>
+
 <body>
 
-  <label for="website">Create a Haos BASH!</label>
-  
-  <input type="text" id="clone_haos_bash" value="git clone https://gitlab.com/ewha_spring_2016/z_spring_2016_bash_toolset.git z_" />
-  <button data-copytarget="#clone_haos_bash">copy</button>
+  <label for="website">Click Button to Copy Text to Clipboard</label>
+  <input type="text" id="example" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+  <button data-copytarget="#example">copy</button>
 
-  <label for="website">Setup a Haos reveal!</label>
-  
-  <input type="text" id="setup_reveal" value="bash <(curl -s https://gitlab.com/ewha_spring_2016/z_spring_2016_bash_toolset/raw/master/haos_bash/setup_reveal_js_on_gh_pages.bash)" />
-  <button data-copytarget="#setup_reveal">copy</button>
-
-<a href="click_to_download.html">click</a>
-
-<!-- 
-  <script src="js/click_to_copy.js"></script>
--->
-
-  <script>
-      
-      (function() {
-
-	'use strict';
-  
-  // click events
-  document.body.addEventListener('click', copy, true);
-
-	// event handler
-	function copy(e) {
-
-    // find target element
-    var 
-      t = e.target,
-      c = t.dataset.copytarget,
-      inp = (c ? document.querySelector(c) : null);
-      
-    // is element selectable?
-    if (inp && inp.select) {
-      
-      // select text
-      inp.select();
-
-      try {
-        // copy text
-        document.execCommand('copy');
-        inp.blur();
-        
-        // copied animation
-        t.classList.add('copied');
-        setTimeout(function() { t.classList.remove('copied'); }, 1500);
-      }
-      catch (err) {
-        alert('please press Ctrl/Cmd+C to copy');
-      }
-      
-    }
-    
-	}
-
-})();
-      
-  </script>
-
-
-
-
+  <script src="js/haos_clickables.js"></script>
 </body>
-</html>
 
-<!-- 
--->
+</html>

@@ -1,17 +1,4 @@
-# Clickable Haos
+# Haos Clickables
 
-*After i broke my elbow, i needed some way to quicly do some things i was often doing.*
-
-* Initial [Clickables](/pgs/index.html)
-* Initial [Clickables](http://koreahaos.github.io/haos_clickables/pgs/index.html
-* http://koreahaos.github.io/haos_clickables/pgs/index.html
-* 
-
-*thinking about what to call this ;
-
-* clickable_haos 
-* CopyClickHaos 
-* click_copy_haos
-* 
-
+This is a simple website that lets the viewer click a button to copy a line of text to their clipboard.
 
