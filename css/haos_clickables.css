@@ -94,3 +94,9 @@ button {
     opacity: 0;
   }
 }
+
+#slide_carousel {
+  clear: left;
+  border: 3px solid grey;
+  margin-top: 25px;
+}

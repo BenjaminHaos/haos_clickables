@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>Slide Show</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./css/slideshow.css">
+<link rel="stylesheet" href="css/haos_clickables.css">
+
+<body>
+
+    <h2 class="w3-center">Cloud9 Clickable Example</h2>
+
+    <div class="w3-content w3-display-container">
+
+        <div id="clickable_div">
+            <label for="example">Click Button to Copy Text to Clipboard</label>
+            <input type="text" id="example" value="bash <(curl -s https://gist.githubusercontent.com/BenjaminHaos/09db137823c1f92e32a53af5764d4c15/raw/example_script.bash)" />
+            <button data-copytarget="#example">copy</button>
+        </div>
+
+        <br>
+        <div id="slide_carousel">
+
+            <div class="w3-display-container mySlides">
+                <img src="./img/screenshot1.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-grey">
+                    Click on button above slide.
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="./img/screenshot2.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-grey">
+                    Paste to terminal in Cloud9 and hit return.
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="./img/screenshot3.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-grey">
+                    See this output.
+                </div>
+            </div>
+        </div>
+
+        <button class="w3-button w3-display-left w3-grey" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-grey" onclick="plusDivs(1)">&#10095;</button>
+
+        <p><a href="https://github.com/KoreaHaos/haos_clickables">GitHub</a></p>
+    </div>
+
+    <script src="./js/haos_clickables.js"></script>
+    <script src="./js/slideshow.js"></script>
+</body>
+
+</html>
