@@ -23,6 +23,10 @@ label {
   text-decoration: none;
 }
 
+#clickable_gists {
+  margin-left: 100px;
+}
+
 input, button {
   float: left;
   font-size: 1em;
