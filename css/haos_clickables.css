@@ -17,6 +17,12 @@ label {
           user-select: none;
 }
 
+.clickable_gist_link {
+  font-size: 1.5em;
+  color: #333333;
+  text-decoration: none;
+}
+
 input, button {
   float: left;
   font-size: 1em;

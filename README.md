@@ -5,3 +5,5 @@ This is a simple website that lets the viewer click a button to copy a line of t
 View [simplest clickable](http://haos.info/haos_clickables/index.html)
 
 View [clickable for Cloud9](http://haos.info/haos_clickables/cloud9_clickable.html)
+
+View [clickable gists](http://haos.info/haos_clickables/clickable_gists.html)
