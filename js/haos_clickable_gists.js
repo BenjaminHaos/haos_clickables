@@ -28,7 +28,6 @@ function create_array_of_clickable_gist_names_and_raw_url(user_dom_should_work_w
                     
                     var id_for_clickable = clickable_gist_filename.substring(0, clickable_gist_filename.indexOf('.')) + "_clickable";
 
-
                     var html_line_for_label = "<label for=\"" + id_for_clickable + "\">" + clickable_gist_html_link + "</label>";
 
                     var text_for_clickable = "bash <(curl -s " + clickable_gist_raw_url + ")";
