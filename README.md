@@ -1,6 +1,6 @@
 # Haos Clickables
 
-This is a simple webage that lets a viewer click a button to copy a line of text to their clipboard.
+This simple webage lets the viewer click a button to copy a line of text to their clipboard.
 
 ### Examples of Use:
 
