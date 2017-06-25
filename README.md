@@ -1,6 +1,6 @@
 # Haos Clickables
 
-This simple web-page lets a viewer click a button and copy a line of text to their clipboard.
+These simple web-page "apps" lets a user click a button and copy a useful line of text to their clipboard.
 
 ### Examples of Use:
 
