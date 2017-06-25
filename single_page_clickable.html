@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Haos Clickables Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 1em;
+            color: #333;
+            background-color: #ddd;
+        }
+        
+        label {
+            clear: both;
+            display: block;
+            font-size: 0.85em;
+            font-weight: bold;
+            padding: 0.8em 0 0.2em 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        input,
+        button {
+            float: left;
+            font-size: 1em;
+            padding: 3px 6px;
+            margin: 0;
+            border: 1px solid #333;
+            outline: 0;
+            box-shadow: none;
+        }
+        
+         ::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+        input {
+            width: 75%;
+            background-color: #fff;
+            border-right: 0 none;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        button {
+            position: relative;
+            background-color: #aaa;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+        
+        .copied::after {
+            position: absolute;
+            top: 12%;
+            right: 110%;
+            display: block;
+            content: "copied";
+            font-size: 0.75em;
+            padding: 2px 3px;
+            color: #fff;
+            background-color: #22a;
+            border-radius: 3px;
+            opacity: 0;
+            will-change: opacity, transform;
+            -webkit-animation: showcopied 1.5s ease;
+            animation: showcopied 1.5s ease;
+        }
+        
+        @-webkit-keyframes showcopied {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            70% {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes showcopied {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            70% {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="website">Click Button to Copy Text to Clipboard</label>
+    <input type="text" id="example" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+    <button data-copytarget="#example">copy</button>
+
+    <script>
+        /*
+        	Copy text from any appropriate field to the clipboard!
+          Sourced from : https://www.sitepoint.com/javascript-copy-to-clipboard/
+          Generously made available by : Craig Buckler, @craigbuckler
+          
+          B.Haos is using it, abusing it, and doing whatever he likes with it!
+          (Per Sir Buckler's request!)
+        */
+        (function() {
+
+            'use strict';
+
+            // click events
+            document.body.addEventListener('click', copy, true);
+
+            // event handler
+            function copy(e) {
+
+                // find target element
+                var
+                    t = e.target,
+                    c = t.dataset.copytarget,
+                    inp = (c ? document.querySelector(c) : null);
+
+                // is element selectable?
+                if (inp && inp.select) {
+
+                    // select text
+                    inp.select();
+
+                    try {
+                        // copy text
+                        document.execCommand('copy');
+                        inp.blur();
+
+                        // copied animation
+                        t.classList.add('copied');
+                        setTimeout(function() {
+                            t.classList.remove('copied');
+                        }, 1500);
+                    }
+                    catch (err) {
+                        alert('please press Ctrl/Cmd+C to copy');
+                    }
+
+                }
+
+            }
+
+        })();
+    </script>
+
+</body>
+
+</html>
