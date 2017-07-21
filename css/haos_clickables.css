@@ -110,3 +110,9 @@ button {
   border: 3px solid grey;
   margin-top: 25px;
 }
+
+.quiet_link:link, .quiet_link:visited, .quiet_link:hover, .quiet_link:active {
+    color: inherit; 
+    background-color: transparent; 
+    text-decoration: none;
+}
